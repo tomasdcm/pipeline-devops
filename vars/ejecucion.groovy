@@ -10,9 +10,9 @@ def call(){
 
 	agent any
 	
-	environment {
+	/*environment {
 		    STAGE = ''
-		}
+		}*/
 
 		parameters {
 			choice(name: 'buildTool', choices: ['gradle', 'maven'], description: 'Indicar herramienta de construcción')
@@ -40,8 +40,8 @@ def call(){
 			}
 			
 			failure {
-				slackSend color: 'danger', message: "Ejecución fallida en stage ${STAGE}"
-				error "Ejecución fallida en stage ${STAGE}"
+				slackSend color: 'danger', message: "Ejecución fallida"
+				error "Ejecución fallida en stage"
 			}
 		}
 	}

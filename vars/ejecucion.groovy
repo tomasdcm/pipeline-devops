@@ -8,13 +8,13 @@ def call(){
   
   pipeline	{
 
-	/*agent any*/
+	agent any
 	
 	/*environment {
 		    STAGE = ''
 		}*/
 
-			
+	stages{		
 		stage('Pipeline'){
 				steps{
 					script{
@@ -35,7 +35,7 @@ def call(){
 				error "Ejecución fallida en stage"
 			}
 		}*/
-	
+		}
 	}
 }
 

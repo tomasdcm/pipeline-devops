@@ -14,8 +14,8 @@ def call(){
             
                     /*def scannerHome = tool 'sonar-scanner';
                     withSonarQubeEnv('sonar-server') { 
-                    bat "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=ejemplo-gradle -Dsonar.sources=src -Dsonar.java.binaries=build " */
-                    }
+                    bat "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=ejemplo-gradle -Dsonar.sources=src -Dsonar.java.binaries=build "
+                    }*/
            
         }
         

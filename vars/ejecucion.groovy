@@ -24,8 +24,10 @@ def call(){
 		}
 		
 		stage('Gradle'){
-			script{
-				gradle() 
+			steps{
+				script{
+					gradle() 
+				}
 			}
 		}
 

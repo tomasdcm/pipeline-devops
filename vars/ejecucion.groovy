@@ -18,7 +18,7 @@ def call(){
 		stage('Pipeline'){
 			steps{
 				script{				    
-					println "Pipeline"
+					figlet "Pipeline"
 
 					if(params.builTools == 'gradle')
 					{

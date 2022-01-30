@@ -13,7 +13,8 @@ def call() {
         stage('Deploy') {
             steps {
                 echo 'Deploying..'
-            }
+        }
+    }
 }
 
 return this;

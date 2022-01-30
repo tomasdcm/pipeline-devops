@@ -1,12 +1,13 @@
 def call() {
-    stage('Compile') {
+        
+        stage('Compile') {
             steps {
                 script{
                         echo 'Compile'
                     }
                 }
             }
-        }
+        
         stage('Test') {
             steps {
                 script{
@@ -14,7 +15,7 @@ def call() {
                     }
                 }
             }
-        }
+        
         stage('Jar') {
             steps {
                 script{
@@ -22,7 +23,7 @@ def call() {
                     }
                 }
             }
-        }
+        
         stage('Run') {
             steps {
                 script{
@@ -30,13 +31,13 @@ def call() {
                     }
                 }
             }
-        }
+        
         stage('TestApp') {
             steps {
                     echo 'TestApp'
                 }
             }
-        }
+        
 }
 
 return this;

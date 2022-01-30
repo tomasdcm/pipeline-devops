@@ -23,8 +23,9 @@ def call(){
 				}
 		}
 		
-		gradle() 
-
+		script{
+			gradle() 
+		}
 		/*post {
 			success {
 				slackSend color: 'good', message: 'success!'

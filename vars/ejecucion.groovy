@@ -6,43 +6,35 @@
 
 def call(){
   
-  pipeline	{
+  pipeline {
 
 	agent any
-	
-	/*environment {
-		    STAGE = ''
-		}*/
 
-	stages{		
+	parameters {
+  		choice choices: ['gradle', 'maven'], description: 'indicar herramienta de construccion', name: 'builTools'
+	}
+
+	stages{
 		stage('Pipeline'){
-				steps{
-					script{
-						println 'Pipeline'        
+			steps{
+				script{				    
+					println "Pipeline"
+
+					if(params.builTools == 'gradle')
+					{
+					   gradle()
+					}
+					else
+					{
+					   maven()
 					}
 				}
-		}
+			}
+		}		
 		
-		stage('Gradle'){
-			steps{
-				script{
-					gradle() 
-				}
-			}
-		}
-
-		/*post {
-			success {
-				slackSend color: 'good', message: 'success!'
-			}
-			
-			failure {
-				slackSend color: 'danger', message: "Ejecución fallida"
-				error "Ejecución fallida en stage"
-			}
-		}*/
-		}
 	}
+}
+
 }
 
 return this;

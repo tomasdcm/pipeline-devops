@@ -7,7 +7,7 @@
 def call(){
   
   stage('TestBuild') {            
-            	bat "gradle Build"
+            	// bat "gradle Build"
         }
         
         stage('SonarQube analysis') {

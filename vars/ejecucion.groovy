@@ -8,7 +8,7 @@ def call(){
   
   pipeline	{
 
-	agent any
+	/*agent any*/
 	
 	/*environment {
 		    STAGE = ''

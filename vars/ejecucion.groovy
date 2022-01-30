@@ -18,12 +18,12 @@ def call(){
 		stage('Pipeline'){
 				steps{
 					script{
-						println 'Pipeline'
-						gradle()          
+						println 'Pipeline'        
 					}
 				}
 		}
 		
+		gradle() 
 
 		/*post {
 			success {

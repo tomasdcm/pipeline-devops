@@ -3,7 +3,6 @@ def call(){
 	String[] str
 	str = params.stage.split(';')
   	println str.size()
-	println str[0]
 		
 	def flag = true
 	for (int i = 0; i < str.size(); i++) {

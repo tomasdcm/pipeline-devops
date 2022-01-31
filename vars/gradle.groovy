@@ -2,7 +2,6 @@ def call(){
 	
 	String[] str
 	str = params.stage.split(';')
-  	println str.size()
 		
 	def flag = true
 	for (int i = 0; i < str.size(); i++) {
@@ -20,7 +19,6 @@ def call(){
 		}	
 	}
 	
-	println flag
 	if(flag){
 		if(str.contains('build') || params.stage.isEmpty() )
 		{	

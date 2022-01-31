@@ -1,24 +1,22 @@
-/*
-	forma de invocación de método call:
-	def ejecucion = load 'script.groovy'
-	ejecucion.call()
-*/
-
 def call(){
   
   pipeline {
 
-	agent any
+	agent any	
+	
 
 	parameters {
-  		choice choices: ['gradle', 'maven'], description: 'indicar herramienta de construccion', name: 'builTools'
+  		choice choices: ['gradle', 'maven'], description: 'Favor indicar herramienta de construccion', name: 'builTools'
+		string(defaultValue: '', name: 'Favor ingresar la(s) etapas a ejecutar, separando con ;', trim: true)
+		
+		
 	}
 
 	stages{
 		stage('Pipeline'){
 			steps{
 				script{				    
-					figlet "Pipeline"
+					println "Pipeline"
 
 					if(params.builTools == 'gradle')
 					{

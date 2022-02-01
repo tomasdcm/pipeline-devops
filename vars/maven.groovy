@@ -15,7 +15,7 @@ def call(String pipelineType){
 
     stage('Compile') {
       STAGE = env.STAGE_NAME
-      bat 'mvn clean compile -e'
+      bat './mvnw.cmd clean compile -e'
     }
 
     stage('Test') {

@@ -20,12 +20,12 @@ def call(String pipelineType){
 
     stage('Test') {
       STAGE = env.STAGE_NAME
-      bat 'mvn clean test -e'
+      // bat 'mvn clean test -e'
     }
 
     stage('Jar') {
       STAGE = env.STAGE_NAME
-      bat 'mvn clean package -e'
+      // bat 'mvn clean package -e'
     }
   } else {
     figlet 'Delivery Continuo'

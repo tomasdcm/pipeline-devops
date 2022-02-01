@@ -15,30 +15,30 @@ def call(String pipelineType){
 
     stage('Compile') {
       STAGE = env.STAGE_NAME
-      //bat 'mvn clean compile -e'
+      bat 'mvn clean compile -e'
     }
 
     stage('Test') {
       STAGE = env.STAGE_NAME
-      // bat 'mvn clean test -e'
+      bat 'mvn clean test -e'
     }
 
     stage('Jar') {
       STAGE = env.STAGE_NAME
-      // bat 'mvn clean package -e'
+      bat 'mvn clean package -e'
     }
   } else {
     figlet 'Delivery Continuo'
     
     stage('Run') {
       STAGE = env.STAGE_NAME
-      // sh 'nohup bash mvnw spring-boot:run &'
-      // sleep 20
+      bat './mvnw.cmd spring-boot:run &'
+      sleep 20
     }
     
     stage('TestApp') {
       STAGE = env.STAGE_NAME
-      //sh "curl -X GET 'http://localhost:8081/rest/mscovid/test?msg=testing'"
+      bat "curl -X GET 'http://localhost:8081/rest/mscovid/test?msg=testing'"
     }
   }
 

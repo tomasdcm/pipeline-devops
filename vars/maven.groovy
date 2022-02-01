@@ -15,17 +15,17 @@ def call(String pipelineType){
 
     stage('Compile') {
       STAGE = env.STAGE_NAME
-      // sh './mvnw clean compile -e'
+      bat 'mvn clean compile -e'
     }
 
     stage('Test') {
       STAGE = env.STAGE_NAME
-      // sh './mvnw clean test -e'
+      bat 'mvn clean test -e'
     }
 
     stage('Jar') {
       STAGE = env.STAGE_NAME
-      // sh './mvnw clean package -e'
+      bat 'mvn clean package -e'
     }
   } else {
     figlet 'Delivery Continuo'

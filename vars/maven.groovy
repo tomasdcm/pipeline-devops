@@ -5,8 +5,10 @@
 */
 
 def call(String pipelineType){
+	
+	figlet 'S15 - TomasDelCampo'
 
-  figlet 'Maven'
+  	figlet 'Maven'
 
   if (pipelineType == 'CI'){
     figlet 'Integracion Continua'

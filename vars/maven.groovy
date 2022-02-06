@@ -4,12 +4,18 @@
 	ejecucion.call()
 */
 
+import helpers.*
+
+
 def call(String pipelineType){
 	
 	figlet 'S15 - TomasDelCampo'
 
   	figlet 'Maven'
 
+	def git = new helpers.Git()
+	git.merge("${env.GIT_LOCAL_BRANCH}",'prueba1')
+	
   /*if (pipelineType == 'CI'){
     figlet 'Integracion Continua'
 

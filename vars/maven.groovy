@@ -14,8 +14,8 @@ def call(String pipelineType){
   	figlet 'Maven'
 
 	stage('Git'){
-		bat "git checkout -b prueba1"
-		bat "git push origin prueba1"
+		bat 'git checkout -b prueba1'
+		bat 'git push origin prueba1'
 	}
 	
   /*if (pipelineType == 'CI'){

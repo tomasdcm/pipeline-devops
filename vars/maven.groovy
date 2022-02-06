@@ -13,8 +13,8 @@ def call(String pipelineType){
 
   	figlet 'Maven'
 
-	def git = new helpers.Git()
-	git.merge("${env.GIT_LOCAL_BRANCH}",'prueba1')
+	bat 'git checkout -b prueba1'
+	bat 'git push origin prueba1'
 	
   /*if (pipelineType == 'CI'){
     figlet 'Integracion Continua'

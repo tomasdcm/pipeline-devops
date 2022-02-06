@@ -10,7 +10,7 @@ def call(String pipelineType){
 
   	figlet 'Maven'
 
-  if (pipelineType == 'CI'){
+  /*if (pipelineType == 'CI'){
     figlet 'Integracion Continua'
 
     stage('Compile') {
@@ -40,7 +40,7 @@ def call(String pipelineType){
       STAGE = env.STAGE_NAME
       bat "curl -X GET 'http://localhost:8081/rest/mscovid/test?msg=testing'"
     }
-  }
+  }*/
 
 }
 

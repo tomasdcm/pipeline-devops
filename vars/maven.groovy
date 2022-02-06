@@ -13,8 +13,8 @@ def call(String pipelineType){
 
   	figlet 'Maven'
 
-	bat 'git checkout -b prueba1'
-	bat 'git push origin prueba1'
+	bat "git checkout -b prueba1"
+	bat "git push origin prueba1"
 	
   /*if (pipelineType == 'CI'){
     figlet 'Integracion Continua'
